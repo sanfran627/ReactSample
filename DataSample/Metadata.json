@@ -1,0 +1,628 @@
+[
+  {
+    "Settings": {
+      "SMTP": {
+        "Host": "smtp.office365.com",
+        "Port": 587,
+        "TimeoutInSeconds": 30,
+        "UseSSL": true,
+        "Username": "",
+        "Password": "",
+        "From": "donotreply@sample.co",
+        "Alerts": "alerts@sample.co"
+      },
+      "SMS": {
+        "AccountSid": "",
+        "AccountToken": "",
+        "SourceNumber": "+15035551212",
+        "SecondsPerSMS": 1,
+        "Alerts": [ "+15035551212" ]
+      },
+      "MailChimp": {
+        "ApiKey": "",
+        "ListId": ""
+      },
+      "Stripe": {
+        "Keys": {
+          "Development": "",
+          "Test": "",
+          "Production": ""
+        }
+      },
+      "Slack": {
+        "Channel": "https://hooks.slack.com/services/{enter your slack channel here}",
+        "Enabled": true
+      },
+      "Misc": {
+        "LaunchDiscountEnabled": "true",
+        "LaunchDiscountStart": "2018-10-22",
+        "LaunchDiscountEnd": "2019-01-01",
+        "LaunchProductId": "{guid here}",
+        "LaunchDiscountAmount": "10.00"
+      },
+      "RefId": null,
+      "Version": 1,
+      "Enabled": true
+    },
+    "Config": [
+      {
+        "ConfigId": 1001,
+        "Type": 2,
+        "Name": "MobileCodeSize",
+        "Value": "6"
+      },
+      {
+        "ConfigId": 1002,
+        "Type": 2,
+        "Name": "MobileCodeAttempts",
+        "Value": "3"
+      }
+    ],
+    "Events": [
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "MetadataCreated",
+        "Text": {
+          "en": "Metadata Created",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "MetadataUpdated",
+        "Text": {
+          "en": "Metadata Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "MetadataDeleted",
+        "Text": {
+          "en": "Metadata Deleted",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "StringCreated",
+        "Text": {
+          "en": "String Created",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "StringUpdated",
+        "Text": {
+          "en": "String Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "StringDeleted",
+        "Text": {
+          "en": "String Deleted",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "QuestionCreated",
+        "Text": {
+          "en": "Question Created",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "QuestionUpdated",
+        "Text": {
+          "en": "Question Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "QuestionDeleted",
+        "Text": {
+          "en": "Question Deleted",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "QuestionAnswered",
+        "Text": {
+          "en": "Question Answered",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "QuestionCalculated",
+        "Text": {
+          "en": "Question Calculated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "UserCreated",
+        "Text": {
+          "en": "User Created",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "UserUpdated",
+        "Text": {
+          "en": "User Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "UserCanceled",
+        "Text": {
+          "en": "User Canceled",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "UserPaymentMade",
+        "Text": {
+          "en": "User Made Payment",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "PasswordUpdated",
+        "Text": {
+          "en": "Password Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "EmailUpdated",
+        "Text": {
+          "en": "Email Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "MobileUpdated",
+        "Text": {
+          "en": "Mobile Updated",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "EmailCodeResent",
+        "Text": {
+          "en": "Email Verification Code Resent",
+          "es": null
+        }
+      },
+      {
+        "Action": 0,
+        "Outcome": 0,
+        "Name": "MobileCodeResent",
+        "Text": {
+          "en": "Mobile Verification Code Resent",
+          "es": null
+        }
+      }
+    ],
+    "Languages": [
+      {
+        "Enum": "en",
+        "Sequence": 1,
+        "Text": {
+          "en": "English",
+          "es": null
+        }
+      },
+      {
+        "Enum": "es",
+        "Sequence": 2,
+        "Text": {
+          "en": "Spanish",
+          "es": null
+        }
+      }
+    ],
+    "ResponseCodes": [
+      {
+        "ResponseCode": 0,
+        "Text": {
+          "en": "Success",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 1,
+        "Text": {
+          "en": "Oops! An unexpected error occured. We''re working to fix it now and will email you when you can try again.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 2,
+        "Text": {
+          "en": "No data",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 3,
+        "Text": {
+          "en": "Unable to locate the requested information",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 4,
+        "Text": {
+          "en": "One or more parameters are invalid",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 5,
+        "Text": {
+          "en": "Site is initializing. Please wait a few moments for it to complete.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 6,
+        "Text": {
+          "en": "There was an error starting up the site. We're working to address this now. Please try again in a few minutes.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 7,
+        "Text": {
+          "en": "There was an error starting up the site. We're working to address this now. Please try again in a few minutes.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 8,
+        "Text": {
+          "en": "We're currently undergoing brief maintenance. Be back up shortly!",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100,
+        "Text": {
+          "en": "Username already in use",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 101,
+        "Text": {
+          "en": "Name already in use for another profile on this User account",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 102,
+        "Text": {
+          "en": "Email address already in use",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 103,
+        "Text": {
+          "en": "Mobile number already in use",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 104,
+        "Text": {
+          "en": "A conditional question already has this question/contributing question/comparer combination",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 105,
+        "Text": {
+          "en": "A calculated question already has this question/contributing question combination",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 106,
+        "Text": {
+          "en": "A question cannot be edited once answers are assigned assigned to it",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 107,
+        "Text": {
+          "en": "Invalid username or password. Please try again",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 108,
+        "Text": {
+          "en": "Unable to send email to the email address provided. Please update the address and try again.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 109,
+        "Text": {
+          "en": "The verification code for your email address is invalid",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 110,
+        "Text": {
+          "en": "The verification code for your email address has expired",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 111,
+        "Text": {
+          "en": "Unable to send an sms to the mobile number provided. Please update the number and try again.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 112,
+        "Text": {
+          "en": "The mobile verification code entered is invalid",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 113,
+        "Text": {
+          "en": "The mobile verification code entered has expired",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 114,
+        "Text": {
+          "en": "The reference Id for the designated record is already in use",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 115,
+        "Text": {
+          "en": "An invitation was already sent to the email address you're attempting to add to your Plan",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 116,
+        "Text": {
+          "en": "A Plan may have only a single owner",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 117,
+        "Text": {
+          "en": "The requested relationship is already on the Plan",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 118,
+        "Text": {
+          "en": "The Plan invitation was already processed. If you're experiencing issues, please contact the Plan Owner for assistance.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 119,
+        "Text": {
+          "en": "We were unable to verify the Discount Code you are trying to use for this plan. If you believe this to be an error please contact us at info@tinyfeet.co and we'll research it immediately.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 120,
+        "Text": {
+          "en": "A Relationship is required to create a Plan",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 121,
+        "Text": {
+          "en": "This plan has already been purchased! You're ready!",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 122,
+        "Text": {
+          "en": "A participant with that email address is already on your plan.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 10000,
+        "Text": {
+          "en": "You don't have sufficient permissions to perform the requested action",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 10001,
+        "Text": {
+          "en": "You don't have sufficient permissions to perform the requested action",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100000,
+        "Text": {
+          "en": "You don't have sufficient permissions to perform the requested action",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100001,
+        "Text": {
+          "en": "We're having problems communicating with our database at this time. We're working to resolve this immediately. Please try again shortly.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100002,
+        "Text": {
+          "en": "Oops! We have a bug in our system. We're working to resolve this immediately.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100003,
+        "Text": {
+          "en": "There was an error communicating with a third party provider. We're working to resolve this immediately. Please try again shortly.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100004,
+        "Text": {
+          "en": "There was an error communicating with a third party provider. We're working to resolve this immediately. Please try again shortly.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 100005,
+        "Text": {
+          "en": "There was an error communicating with a third party provider. We're working to resolve this immediately. Please try again shortly.",
+          "es": null
+        }
+      },
+      {
+        "ResponseCode": 2147483647,
+        "Text": {
+          "en": "The request action has not yet been implemented",
+          "es": null
+        }
+      }
+    ],
+    "UserStatus": [
+      {
+        "UserStatusId": 0,
+        "Sequence": 1,
+        "Text": {
+          "en": "None",
+          "es": null
+        },
+        "Caption": {
+          "en": "None",
+          "es": null
+        }
+      },
+      {
+        "UserStatusId": 1,
+        "Sequence": 2,
+        "Text": {
+          "en": "Registered",
+          "es": null
+        },
+        "Caption": {
+          "en": "The account has been created but pending email or mobile verification. The account owner has 30 days from creation before the account will be deleted.",
+          "es": null
+        }
+      },
+      {
+        "UserStatusId": 2,
+        "Sequence": 3,
+        "Text": {
+          "en": "Verified",
+          "es": null
+        },
+        "Caption": {
+          "en": "The account has been created but no payment has been received. The account owner has 30 days from creation before the account will be deleted.",
+          "es": null
+        }
+      },
+      {
+        "UserStatusId": 3,
+        "Sequence": 4,
+        "Text": {
+          "en": "Current",
+          "es": null
+        },
+        "Caption": {
+          "en": "The account is in good standing.",
+          "es": null
+        }
+      },
+      {
+        "UserStatusId": 4,
+        "Sequence": 5,
+        "Text": {
+          "en": "Suspended",
+          "es": null
+        },
+        "Caption": {
+          "en": "The account was suspended pending resolution of an incident report.",
+          "es": null
+        }
+      },
+      {
+        "UserStatusId": 5,
+        "Sequence": 6,
+        "Text": {
+          "en": "Closed",
+          "es": null
+        },
+        "Caption": {
+          "en": "The account was cancelled by the account owner(s).",
+          "es": null
+        }
+      }
+    ],
+    "RefId": null,
+    "Version": 1,
+    "Enabled": true
+  }
+]
