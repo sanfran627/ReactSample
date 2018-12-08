@@ -20,13 +20,13 @@ const attempt = (reset) => {
         interval = 3;
         break;
       case 1:
-        interval = 10;
+        interval = 5;
         break;
       case 2:
-        interval = 20;
+        interval = 10;
         break;
       case 3:
-        interval = 30;
+        interval = 20;
         break;
       default:
         break;
@@ -68,7 +68,7 @@ const startSignalR = (store, retry) => {
     .catch(() => {
       dispatch({ type: 'reset' });
       // console.log('failed to start  ' + err.toString())
-      if ((retry||false) && !timeoutRunning) {
+      if (!(retry||false) && !timeoutRunning) {
         timeoutRunning = true;
         attempt();
         dispatch({ type: 'retry', interval: interval });

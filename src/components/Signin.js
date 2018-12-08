@@ -56,27 +56,28 @@ class Signin extends React.Component {
   }
 
   signinClick = () => {
-    this.setState({ sending: true });
+    var self = this;
+    self.setState({ sending: true });
 
     var rq = {
-      username: this.state.email,
-      password: this.state.password,
-      language: this.state.language
+      username: self.state.email,
+      password: self.state.password,
+      language: self.state.language
     };
 
     // send the signinup to the websocket
 
     // (to test this, simply bypass the signin callback)
-    this.props.signin(rq, this.signinCallback);
+    self.props.signin(rq, self.signinCallback);
     
     // allow for a maximum of 5 seconds to signin before aborting
     setTimeout(() => {
       // verify if still sending
-      if (this.state.sending) {
+      if (self.state.sending) {
         // reset state
-        this.setState({ sending: false });
+        self.setState({ sending: false });
         // if we're here, show an error
-        this.props.error(1,`We didn't receive a response in a timely manner. Please try again. If the problem persists, there is likely a system error and we'll address is immediately.`);
+        self.props.error(1,`We didn't receive a response in a timely manner. Please try again. If the problem persists, there is likely a system error and we'll address is immediately.`);
       }
 
     }, 5 * 1000);
