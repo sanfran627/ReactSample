@@ -1,5 +1,6 @@
 [
   {
+    // this is loaded via blob storage
     "Settings": {
       "SMTP": {
         "Host": "smtp.office365.com",

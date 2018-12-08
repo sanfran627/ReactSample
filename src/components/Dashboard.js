@@ -2,10 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 class Dashboard extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-  }
-
   componentDidMount () {
     if (this.props.user === null) {
       this.props.history.replace('/');

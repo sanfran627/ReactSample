@@ -5,7 +5,6 @@ var signalR = require('@aspnet/signalr');
 var messageHandlers = {};
 var messageHandlersE = {};
 var timeoutRunning = false;
-var retry = true;
 var interval = 3;
 var attempts = 0;
 var token = '';
@@ -13,29 +12,23 @@ var connection = null;
 
 const attempt = (reset) => {
   if ((reset || false)) {
-    retry = true;
     attempts = 0;
     interval = 3;
   } else {
     switch (attempts) {
       case 0:
-        retry = true;
         interval = 3;
         break;
       case 1:
-        retry = true;
         interval = 10;
         break;
       case 2:
-        retry = true;
         interval = 20;
         break;
       case 3:
-        retry = true;
         interval = 30;
         break;
       default:
-        retry = false;
         break;
     }
     attempts++;

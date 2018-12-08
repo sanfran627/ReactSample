@@ -1,6 +1,5 @@
 ﻿import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { Glyphicon, Nav, Navbar, NavItem } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import ButtonConnection from './ButtonConnection';
@@ -17,7 +16,7 @@ class Navigator extends React.Component {
       <Navbar inverse collapseOnSelect>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#brand">React-Bootstrap</a>
+            <a href="#brand">{h ? `Hi ${d}` : 'React-Bootstrap'}</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

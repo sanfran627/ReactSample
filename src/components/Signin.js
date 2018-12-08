@@ -11,6 +11,7 @@ class Signin extends React.Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.signinClick = this.signinClick.bind(this);
+    this.signinCallback = this.signinCallback.bind(this);
 
     var e = cookies.get('email');
 
@@ -19,7 +20,8 @@ class Signin extends React.Component {
       password: 'testing-1234!',
       language: 'en',
       staySignedIn: true,
-      sending: false
+      sending: false,
+      success: false
     };
   }
 
@@ -62,24 +64,47 @@ class Signin extends React.Component {
       language: this.state.language
     };
 
+    // send the signinup to the websocket
+
+    // (to test this, simply bypass the signin callback)
     this.props.signin(rq, this.signinCallback);
+    
+    // allow for a maximum of 5 seconds to signin before aborting
+    setTimeout(() => {
+      // verify if still sending
+      if (this.state.sending) {
+        // reset state
+        this.setState({ sending: false });
+        // if we're here, show an error
+        this.props.error(1,`We didn't receive a response in a timely manner. Please try again. If the problem persists, there is likely a system error and we'll address is immediately.`);
+      }
+
+    }, 5 * 1000);
   }
 
-  signinCallback = () => {
-      console.log(this.props.user);
+  // eslint-disable-next-line
+  signinCallback = () => { 
+    // process the callback ONLY if we're still sending
+    if (!this.state.sending) {
+      // do nothing - we passed the timeout. Let the user try again if they so desire
+      return;
+    }
+
+    // update sending status
     this.setState({ sending: false });
+
+    // if we received a user object in the response, it'll be in state. 
     if (this.props.user !== null) {
-      // redirect to the main page
-      console.log('redirecting!');
+      // save the username/email via a cookie
       if (this.state.staySignedIn) {
         cookies.set('email', this.state.email);
       } else {
         cookies.remove('email');
       }
+      // redirect to the main page
       this.props.history.push('/dashboard');
-    } else {
-      //show error
     }
+    // if there is an error, it will display automatically
   }
 
   getText = (field, defaultValue) => {
@@ -151,7 +176,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    signin: (credentials, callback) => dispatch({ type: 'signin', credentials, callback })
+    signin: (credentials, callback) => dispatch({ type: 'signin', credentials, callback }),
+    error: (code, message) => dispatch({ type: 'error', response: { code, message } })
   };
 };
 
