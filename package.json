@@ -3,11 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:5000/",
+  "main": "electron-starter.js",
   "scripts": {
     "start": "set PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-electron": "electron .",
+    "electron-rebuild": "./node_modules/.bin/electron-rebuild"
+  },
+  "devDependencies": {
+    "electron": "^3.0.10",
+    "electron-packager": "^4.1.3",
+    "electron-rebuild": "^1.8.2"
   },
   "dependencies": {
     "@aspnet/signalr": "3.0.0-preview-18579-0056",
